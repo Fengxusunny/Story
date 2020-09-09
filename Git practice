@@ -1,0 +1,119 @@
+Last login: Mon Sep  7 22:55:47 on ttys000
+(base) sunnydeMacBook-Pro:~ sunnyxu$ cd Desktop/
+(base) sunnydeMacBook-Pro:Desktop sunnyxu$ mkdir Story
+(base) sunnydeMacBook-Pro:Desktop sunnyxu$ cd Story/
+(base) sunnydeMacBook-Pro:Story sunnyxu$ touch chapter1.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ open chapter1.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git init
+Initialized empty Git repository in /Users/sunnyxu/Desktop/Story/.git/
+(base) sunnydeMacBook-Pro:Story sunnyxu$ ls -a
+.		..		.git		chapter1.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git add chapter1.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   chapter1.txt
+
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git commit -m "completed chapter 1"
+[master (root-commit) b4a7b29] completed chapter 1
+ Committer: Sunny Xu <sunnyxu@sunnydeMacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git log
+commit b4a7b29200f0e2ab52c89faa48592c4e1d8adcf4 (HEAD -> master)
+Author: Sunny Xu <sunnyxu@sunnydeMacBook-Pro.local>
+Date:   Tue Sep 8 18:42:27 2020 -0700
+
+    completed chapter 1
+(base) sunnydeMacBook-Pro:Story sunnyxu$ touch chapter2.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ touch chapter3.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ open chapter2.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ open chapter3.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git add .
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   chapter2.txt
+	new file:   chapter3.txt
+
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git commit -m "Completed Chapter 2 and 3"
+[master fb6b917] Completed Chapter 2 and 3
+ Committer: Sunny Xu <sunnyxu@sunnydeMacBook-Pro.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git log
+commit fb6b9177bbe9a7f9582d59e936267bdde0bdf798 (HEAD -> master)
+Author: Sunny Xu <sunnyxu@sunnydeMacBook-Pro.local>
+Date:   Tue Sep 8 18:48:17 2020 -0700
+
+    Completed Chapter 2 and 3
+
+commit b4a7b29200f0e2ab52c89faa48592c4e1d8adcf4
+Author: Sunny Xu <sunnyxu@sunnydeMacBook-Pro.local>
+Date:   Tue Sep 8 18:42:27 2020 -0700
+
+    completed chapter 1
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 64aad5f..7db8211 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-Today is sunny day.
+\ No newline at end of file
++Nvanvan jvajkvnjakn avnjnjln
+\ No newline at end of file
+(base) sunnydeMacBook-Pro:Story sunnyxu$ git checkout chapter3.txt
+(base) sunnydeMacBook-Pro:Story sunnyxu$ 
